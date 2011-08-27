@@ -1,5 +1,16 @@
+// Set your required base font-size and line-height here. 
+// I'm using a line-height which is 1.5 times larger than the font-size, so in my case 16px font-size = 24px line-height
+
 @defaultfontsize: 16;
 @defaultlineheight: @defaultfontsize*1.5;
+
+// @fontsize: defaults to 16 but you can pass in any value you want
+
+// @lineheight defaults to 24 and will change depending on the size of your text. Working out the required line-height should be the only calculation you have to do and it's an easy one as it will always be a multiple of your default line-height and should always be equal to or larger than your font-size. So if your font-size is 12, line-height will be 24; if your font-size is 24, it'll be 24; if your font-size is 36, line-height will be 48; if it's 50, it'll be 72.
+
+// @mulitplier is used for larger font-sizes if you want the margin to be larger than a standard 1 line-height's worth which is the default. In most cases, the only value other than 1 you would use would be 2 and only for large headings.
+
+// @lineheightreducer is used for text with a smaller font-size which won't look as good with such a large leading. Instead, use the reducer to bring it down to a more readable level. I've used 1.2 which will mean five lines of smaller text will fit into the space of four lines of normal text. I would tink you'd only need to use it for text sizes around 10px or 11px.
 
 .font(@fontsize:16,@lineheight:24,@multiplier:1,@lineheightreducer:1) {
 	font-size: (@fontsize/@defaultfontsize)*1em;
