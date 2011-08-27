@@ -1,0 +1,181 @@
+@media screen {
+  /* Basic styling */
+  html {
+    height: 100%;
+    overflow-y: scroll;
+  }
+  body {
+    background: #FFF;
+    color: #333;
+    font: 100%/1.5 'Gentium Basic', serif;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    max-width: 80em;
+    width: 50%;
+  }
+  h1, h2 {
+    color: #000000;
+  }
+  dt {
+    font-weight: bold;
+  }
+  a {
+    color: #900;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: underline;
+  }
+  /* Font sizes */
+  h1 {
+    font-size: 3.75em;
+    line-height: 1.2;
+    margin: 0.39999999999999997em 0 0;
+  }
+  h2 {
+    font-size: 1.875em;
+    line-height: 1.6;
+    margin: 0.8em 0 0;
+  }
+  h3 {
+    font-size: 1.125em;
+    line-height: 1.3333333333333333;
+    margin: 1.3333333333333333em 0 0;
+  }
+  ul, ol {
+    margin: 1.5em 0 0;
+  }
+  p,
+  li,
+  dt,
+  dd {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1.5em 0 0;
+  }
+  dd {
+    margin-top: 0;
+  }
+  li {
+    margin: 0;
+  }
+  blockquote {
+    font-style: italic;
+    margin: 0 1.5em;
+  }
+  /* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
+  .f10 {
+    font-size: 0.625em;
+    line-height: 2;
+    margin: 2.4em 0 0;
+    /*For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
+  
+  }
+  .f11 {
+    font-size: 0.6875em;
+    line-height: 1.8181818181818181;
+    margin: 2.1818181818181817em 0 0;
+  }
+  .f12 {
+    font-size: 0.75em;
+    line-height: 2;
+    margin: 2em 0 0;
+  }
+  .f13 {
+    font-size: 0.8125em;
+    line-height: 1.8461538461538463;
+    margin: 1.8461538461538463em 0 0;
+  }
+  .f14 {
+    font-size: 0.875em;
+    line-height: 1.7142857142857142;
+    margin: 1.7142857142857142em 0 0;
+  }
+  .f15 {
+    font-size: 0.9375em;
+    line-height: 1.6;
+    margin: 1.6em 0 0;
+  }
+  .f16 {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1.5em 0 0;
+  }
+  .f18 {
+    font-size: 1.125em;
+    line-height: 1.3333333333333333;
+    margin: 1.3333333333333333em 0 0;
+  }
+  .f21 {
+    font-size: 1.3125em;
+    line-height: 1.1428571428571428;
+    margin: 1.1428571428571428em 0 0;
+  }
+  .f24 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 1em 0 0;
+  }
+  .f30 {
+    font-size: 1.875em;
+    line-height: 1.6;
+    margin: 0.8em 0 0;
+  }
+  .f36 {
+    font-size: 2.25em;
+    line-height: 1.3333333333333333;
+    margin: 0.6666666666666666em 0 0;
+  }
+  .f42 {
+    font-size: 2.625em;
+    line-height: 1.1428571428571428;
+    margin: 0.5714285714285714em 0 0;
+  }
+  .f48 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0.5em 0 0;
+  }
+  .f54 {
+    font-size: 3.375em;
+    line-height: 1.3333333333333333;
+    margin: 0.4444444444444444em 0 0;
+  }
+  .f60 {
+    font-size: 3.75em;
+    line-height: 1.2;
+    margin: 0.39999999999999997em 0 0;
+  }
+  .f66 {
+    font-size: 4.125em;
+    line-height: 1.0909090909090908;
+    margin: 0.3636363636363636em 0 0;
+  }
+  /* From here on, I'm setting the top margin of each class to be double the default line-height, i.e. 48px instead of 24px because I think that for larger sized blocks of text, a gap of a single line-height's height isn't enough to separate the headings from the rest of the content. */
+  .f72 {
+    font-size: 4.5em;
+    line-height: 1;
+    margin: 0.6666666666666666em 0 0;
+  }
+  .f84 {
+    font-size: 5.25em;
+    line-height: 1.1428571428571428;
+    margin: 0.5714285714285714em 0 0;
+  }
+  .f96 {
+    font-size: 6em;
+    line-height: 1;
+    margin: 0.5em 0 0;
+  }
+  .f108 {
+    font-size: 6.75em;
+    line-height: 1.1111111111111112;
+    margin: 0.4444444444444445em 0 0;
+  }
+  .f120 {
+    font-size: 7.5em;
+    line-height: 1;
+    margin: 0.4em 0 0;
+  }
+}
