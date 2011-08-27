@@ -64,7 +64,11 @@
     font-style: italic;
     margin: 0 1.5em;
   }
+  code {
+    font-size: 16px;
+  }
   /* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
+  /* Mixin formula: required font-size; required line-height; margin multiplier; line-height reducer. See fonts.less for more details. */
   .f10 {
     font-size: 0.625em;
     line-height: 2;

@@ -37,8 +37,10 @@
 	dd { margin-top:0 }
 	li { margin:0 }
 	blockquote { font-style:italic; margin: 0 1.5em; }
+	code { font-size:16px }
 
 	/* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
+	/* Mixin formula: required font-size; required line-height; margin multiplier; line-height reducer. See fonts.less for more details. */
 	.f10 {
 		.font(10,24,1,1.2); /*For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
 	}
