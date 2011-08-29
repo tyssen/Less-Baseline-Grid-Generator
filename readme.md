@@ -11,4 +11,4 @@ Reduce the amount of work you need to do to calculate <code>font-size</code>, <c
 
 ## Credits
 
-[John Faulds](http://www.tyssendesign.com.au/) / [@tyssen](http://twitter.com/tyssen/)..
+[John Faulds](http://www.tyssendesign.com.au/) / [@tyssen](http://twitter.com/tyssen/).
