@@ -10,12 +10,12 @@
 
 	body {
 		background: #FFF;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
-		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2)));
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.2) 100%);
-		background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.2) 100%);
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.2) 100%);
-		background-image: linear-gradient(top, rgba(0,0,0,0.2) 95%,rgba(0,0,0,0.2) 100%);     
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.1) 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.1) 100%);
+		background-image: -o-linear-gradient(top, rgba(0,0,0,0) 95%, rgba(0,0,0,0.1) 100%);
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 95%,rgba(0,0,0,0.1) 100%);
+		background-image: linear-gradient(top, rgba(0,0,0,0.1) 95%,rgba(0,0,0,0.1) 100%);     
 		-webkit-background-size: 100% 24px;  
 		     -o-background-size: 100% 24px;
 		        background-size: 100% 24px;
@@ -27,6 +27,9 @@
 		width: 50%;
 	}
 	h1, h2 { color: #000 }
+	h1 {
+		text-align:center;
+	}
 	dt { font-weight:bold }
 	a {
 		color:#900;
@@ -48,10 +51,40 @@
 	blockquote { font-style:italic; margin: 0 1.5em; }
 	code { font-size:16px }
 
+	.box {
+		background-color:rgba(0,0,0,.1);
+		border:0 solid #999;
+		padding:0 15px;
+		h3:first-child,p:first-child { margin-top:0 }
+	}
+	.box+.box { margin-top:1.5em }
+
+	.two {
+		.border-boxes(2,2,1,2); /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
+	}
+
+	.three {
+		.border-boxes(5,3,.5,.5);
+	}
+
+	.four {
+		.border-boxes(3,3,.5,.5);
+		border-left-width:3px;
+		border-right-width:3px;
+	}
+
+	.five {
+		.noborder-boxes(.5,.5);
+	}
+
+	.round {
+		border-radius:8px;
+	}
+
 	/* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
-	/* Mixin formula: required font-size; required line-height; margin multiplier; line-height reducer. See fonts.less for more details. */
 	.f10 {
-		.font(10,24,1,1.2); /* For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
+		.font(10,24,1,1.2); /* Mixin formula: font-size; line-height; margin multiplier; line-height reducer */
+		/* For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
 	}
 	.f11 {
 		.font(11,24,1,1.2);

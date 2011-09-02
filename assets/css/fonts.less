@@ -8,7 +8,7 @@
 
 // @lineheight defaults to 24 and will change depending on the size of your text. Working out the required line-height should be the only calculation you have to do and it's an easy one as it will always be a multiple of your default line-height and should always be equal to or larger than your font-size. So if your font-size is 12, line-height will be 24; if your font-size is 24, it'll be 24; if your font-size is 36, line-height will be 48; if it's 50, it'll be 72.
 
-// @mulitplier is used for larger font-sizes if you want the margin to be larger than a standard 1 line-height's worth which is the default. In most cases, the only value other than 1 you would use would be 2 and only for large headings.
+// @multiplier is used for larger font-sizes if you want the margin to be larger than a standard 1 line-height's worth which is the default. In most cases, the only value other than 1 you would use would be 2 and only for large headings.
 
 // @lineheightreducer is used for text with a smaller font-size which won't look as good with such a large leading. Instead, use the reducer to bring it down to a more readable level. I've used 1.2 which will mean five lines of smaller text will fit into the space of four lines of normal text. I would tink you'd only need to use it for text sizes around 10px or 11px.
 
@@ -16,4 +16,22 @@
 	font-size: (@fontsize/@defaultfontsize)*1em;
 	line-height: @lineheight/@fontsize/@lineheightreducer;
 	margin: (@lineheight/@fontsize*(@multiplier/(@lineheight/@defaultlineheight)))*1em 0 0;
+}
+
+// @bordertop and @borderbottom default to 1px and the values that you pass in are pixel values. 
+
+// @paddingtop and @paddingbottom also default to 1 but in this case 1 refers to the number of line spaces you want, so in this example, 24 pixels. Fractional values like .5 can be used too (see the demo page), but you can't use 0 because that would result in a negative padding value which is invalid CSS.
+
+.border-boxes(@bordertop:1,@borderbottom:1,@paddingtop:1,@paddingbottom:1) {
+	border-top-width: @bordertop*1px;
+	border-bottom-width: @borderbottom*1px;
+	padding-top: (((@paddingtop*@defaultlineheight)-@bordertop)/@defaultfontsize)*1em;
+	padding-bottom: (((@paddingbottom*@defaultlineheight)-@borderbottom)/@defaultfontsize)*1em;
+}
+
+// Because there's no way to display stuff conditionally using LESS, if you want a box with no borders a separate mixin is needed with the border properties omitted. Other than that, this mixin is the same as the one above.
+
+.noborder-boxes(@paddingtop:1,@paddingbottom:1) {
+	padding-top: (((@paddingtop*@defaultlineheight))/@defaultfontsize)*1em;
+	padding-bottom: (((@paddingbottom*@defaultlineheight))/@defaultfontsize)*1em;
 }

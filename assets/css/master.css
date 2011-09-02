@@ -6,12 +6,12 @@
   }
   body {
     background: #FFF;
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.2) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.2)));
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.2) 100%);
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.2) 100%);
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.2) 100%);
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0.2) 95%, rgba(0, 0, 0, 0.2) 100%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.1) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(95%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.1) 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.1) 100%);
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.1) 100%);
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0.1) 95%, rgba(0, 0, 0, 0.1) 100%);
     -webkit-background-size: 100% 24px;
     -o-background-size: 100% 24px;
     background-size: 100% 24px;
@@ -24,6 +24,9 @@
   }
   h1, h2 {
     color: #000000;
+  }
+  h1 {
+    text-align: center;
   }
   dt {
     font-weight: bold;
@@ -76,12 +79,53 @@
   code {
     font-size: 16px;
   }
+  .box {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0 solid #999;
+    padding: 0 15px;
+  }
+  .box h3:first-child, .box p:first-child {
+    margin-top: 0;
+  }
+  .box + .box {
+    margin-top: 1.5em;
+  }
+  .two {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding-top: 1.375em;
+    padding-bottom: 2.875em;
+    /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
+  
+  }
+  .three {
+    border-top-width: 5px;
+    border-bottom-width: 3px;
+    padding-top: 0.4375em;
+    padding-bottom: 0.5625em;
+  }
+  .four {
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    padding-top: 0.5625em;
+    padding-bottom: 0.5625em;
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
+  .five {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
+  .round {
+    border-radius: 8px;
+  }
   /* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
-  /* Mixin formula: required font-size; required line-height; margin multiplier; line-height reducer. See fonts.less for more details. */
   .f10 {
     font-size: 0.625em;
     line-height: 2;
     margin: 2.4em 0 0;
+    /* Mixin formula: font-size; line-height; margin multiplier; line-height reducer */
+  
     /* For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
   
   }
