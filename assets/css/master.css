@@ -91,24 +91,18 @@
     margin-top: 1.5em;
   }
   .two {
-    border-top-width: 2px;
-    border-bottom-width: 2px;
-    padding-top: 1.375em;
-    padding-bottom: 2.875em;
+    padding-top: 1.375em; border-top-width: 2px;
+    padding-bottom: 2.875em; border-bottom-width: 2px;
     /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
   
   }
   .three {
-    border-top-width: 5px;
-    border-bottom-width: 3px;
-    padding-top: 0.4375em;
-    padding-bottom: 0.5625em;
+    padding-top: 0.4375em; border-top-width: 5px;
+    padding-bottom: 0.5625em; border-bottom-width: 3px;
   }
   .four {
-    border-top-width: 3px;
-    border-bottom-width: 3px;
-    padding-top: 0.5625em;
-    padding-bottom: 0.5625em;
+    padding-top: 0.5625em; border-top-width: 3px;
+    padding-bottom: 0.5625em; border-bottom-width: 3px;
     border-left-width: 3px;
     border-right-width: 3px;
   }

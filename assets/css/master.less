@@ -60,21 +60,21 @@
 	.box+.box { margin-top:1.5em }
 
 	.two {
-		.border-boxes(2,2,1,2); /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
+		.boxes(1,2,2,2); /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
 	}
 
 	.three {
-		.border-boxes(5,3,.5,.5);
+		.boxes(.5,.5,5,3);
 	}
 
 	.four {
-		.border-boxes(3,3,.5,.5);
+		.boxes(.5,.5,3,3);
 		border-left-width:3px;
 		border-right-width:3px;
 	}
 
 	.five {
-		.noborder-boxes(.5,.5);
+		.boxes(.5,.5);
 	}
 
 	.round {

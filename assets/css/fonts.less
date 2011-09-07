@@ -35,3 +35,16 @@
 	padding-top: (((@paddingtop*@defaultlineheight))/@defaultfontsize)*1em;
 	padding-bottom: (((@paddingbottom*@defaultlineheight))/@defaultfontsize)*1em;
 }
+
+// Conditional boxes, uses escaping and JavaScript evaluation to determine if border-width- declarations should be added to the output.
+
+.boxes(@paddingtop:1,@paddingbottom:1,@bordertop:0,@borderbottom:0) {
+
+	@border-top-width: @bordertop*1px;
+	@border-bottom-width: @borderbottom*1px;
+
+	padding-top: e(%("%sem%s", (((@paddingtop*@defaultlineheight)-@bordertop)/@defaultfontsize), `@{bordertop}>=1?'; border-top-width: @{border-top-width}':''` ));
+	
+	padding-bottom: e(%("%sem%s", (((@paddingbottom*@defaultlineheight)-@borderbottom)/@defaultfontsize)*1, `@{borderbottom}>=1?'; border-bottom-width: @{border-bottom-width}':''` ));
+	
+}
