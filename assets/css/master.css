@@ -79,49 +79,11 @@
   code {
     font-size: 16px;
   }
-  .box {
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 0 solid #999;
-    padding: 0 15px;
-  }
-  .box h3:first-child, .box p:first-child {
-    margin-top: 0;
-  }
-  .box + .box {
-    margin-top: 1.5em;
-  }
-  .two {
-    padding-top: 1.375em; border-top-width: 2px;
-    padding-bottom: 2.875em; border-bottom-width: 2px;
-    /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
-  
-  }
-  .three {
-    padding-top: 0.4375em; border-top-width: 5px;
-    padding-bottom: 0.5625em; border-bottom-width: 3px;
-  }
-  .four {
-    padding-top: 0.5625em; border-top-width: 3px;
-    padding-bottom: 0.5625em; border-bottom-width: 3px;
-    border-left-width: 3px;
-    border-right-width: 3px;
-  }
-  .five {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-  }
-  .round {
-    border-radius: 8px;
-  }
   /* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
   .f10 {
     font-size: 0.625em;
     line-height: 2;
     margin: 2.4em 0 0;
-    /* Mixin formula: font-size; line-height; margin multiplier; line-height reducer */
-  
-    /* For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
-  
   }
   .f11 {
     font-size: 0.6875em;
@@ -228,5 +190,38 @@
     font-size: 7.5em;
     line-height: 1;
     margin: 0.4em 0 0;
+  }
+  /* Boxes */
+  .box {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0 solid #999;
+    padding: 0 15px;
+  }
+  .box h3:first-child, .box p:first-child {
+    margin-top: 0;
+  }
+  .box + .box {
+    margin-top: 1.5em;
+  }
+  .two {
+    padding-top: 1.375em; border-top-width: 2px;
+    padding-bottom: 2.875em; border-bottom-width: 2px;
+  }
+  .three {
+    padding-top: 0.4375em; border-top-width: 5px;
+    padding-bottom: 0.5625em; border-bottom-width: 3px;
+  }
+  .four {
+    padding-top: 0.5625em; border-top-width: 3px;
+    padding-bottom: 0.5625em; border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+  }
+  .five {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+  }
+  .round {
+    border-radius: 8px;
   }
 }

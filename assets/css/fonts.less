@@ -20,24 +20,14 @@
 
 // @bordertop and @borderbottom default to 1px and the values that you pass in are pixel values. 
 
-// legacy
-
-.border-boxes(@bordertop:1,@borderbottom:1,@paddingtop:1,@paddingbottom:1) {
-	.boxes(@paddingtop, @paddingbottom, @bordertop, @borderbottom);
-}
-
-// legacy
-
-.noborder-boxes(@paddingtop:1,@paddingbottom:1) {
-	.boxes(@paddingtop, @paddingbottom, 0, 0);
-}
-
-// Conditional boxes, uses escaping and JavaScript evaluation to determine if border-width- declarations should be added to the output.
+// @paddingtop and @paddingbottom also default to 1 but in this case 1 refers to the number of line spaces you want, so in this example, 24 pixels. Fractional values like .5 can be used too (see the demo page), but you can't use 0 because that would result in a negative padding value which is invalid CSS.
 
 .boxes(@paddingtop:1,@paddingbottom:1,@bordertop:0,@borderbottom:0) {
 
 	@border-top-width: @bordertop*1px;
 	@border-bottom-width: @borderbottom*1px;
+
+	// Conditional boxes, uses escaping and JavaScript evaluation to determine if border-width- declarations should be added to the output.
 
 	padding-top: e(%("%sem%s", (((@paddingtop*@defaultlineheight)-@bordertop)/@defaultfontsize), `@{bordertop}>=1?'; border-top-width: @{border-top-width}':''` ));
 	

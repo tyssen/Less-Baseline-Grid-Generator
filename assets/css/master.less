@@ -51,40 +51,10 @@
 	blockquote { font-style:italic; margin: 0 1.5em; }
 	code { font-size:16px }
 
-	.box {
-		background-color:rgba(0,0,0,.1);
-		border:0 solid #999;
-		padding:0 15px;
-		h3:first-child,p:first-child { margin-top:0 }
-	}
-	.box+.box { margin-top:1.5em }
-
-	.two {
-		.boxes(1,2,2,2); /* Mixin formula: border-top, border-bottom, padding-top, padding-bottom */
-	}
-
-	.three {
-		.boxes(.5,.5,5,3);
-	}
-
-	.four {
-		.boxes(.5,.5,3,3);
-		border-left-width:3px;
-		border-right-width:3px;
-	}
-
-	.five {
-		.boxes(.5,.5);
-	}
-
-	.round {
-		border-radius:8px;
-	}
-
 	/* Generic font-size classes. These names are obviously non-semantic and purely to show the font-size being set for each one. */
 	.f10 {
-		.font(10,24,1,1.2); /* Mixin formula: font-size; line-height; margin multiplier; line-height reducer */
-		/* For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2) */
+		.font(10,24,1,1.2); // Mixin formula: font-size; line-height; margin multiplier; line-height reducer
+		// For smaller font-sizes, we'll decrease the line-height a bit (the last figure, 1.2)
 	}
 	.f11 {
 		.font(11,24,1,1.2);
@@ -150,4 +120,36 @@
 	.f120 {
 		.font(120,120,2);
 	}
+
+	/* Boxes */
+	.box {
+		background-color:rgba(0,0,0,.1);
+		border:0 solid #999;
+		padding:0 15px;
+		h3:first-child,p:first-child { margin-top:0 }
+	}
+	.box+.box { margin-top:1.5em }
+
+	.two {
+		.boxes(1,2,2,2); // Mixin formula: padding-top, padding-bottom, border-top, border-bottom
+	}
+
+	.three {
+		.boxes(.5,.5,5,3);
+	}
+
+	.four {
+		.boxes(.5,.5,3,3);
+		border-left-width:3px;
+		border-right-width:3px;
+	}
+
+	.five {
+		.boxes(.5,.5);
+	}
+
+	.round {
+		border-radius:8px;
+	}
+
 }

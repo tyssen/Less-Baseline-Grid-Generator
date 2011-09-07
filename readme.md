@@ -9,6 +9,7 @@ Reduce the amount of work you need to do to calculate <code>font-size</code>, <c
 - **master.css** the CSS file generated when compiling master.less.
 - **index.html** basic markup to show elements with different font-sizes.
 
-## Credits
+## Contributors
 
 [John Faulds](http://www.tyssendesign.com.au/) / [@tyssen](http://twitter.com/tyssen/).
+[Peter Wilson](http://pwcc.cc/) / [@pwcc](http://twitter.com/pwcc/).
