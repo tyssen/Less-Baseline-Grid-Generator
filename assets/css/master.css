@@ -22,7 +22,8 @@
     max-width: 80em;
     width: 50%;
   }
-  h1, h2 {
+  h1,
+  h2 {
     color: #000000;
   }
   h1 {
@@ -36,14 +37,16 @@
     font-weight: bold;
     text-decoration: none;
   }
-  a:hover, a:focus, a:active {
+  a:hover,
+  a:focus,
+  a:active {
     text-decoration: underline;
   }
   /* Font sizes */
   h1 {
     font-size: 3.75em;
     line-height: 1.2;
-    margin: 0.39999999999999997em 0 0;
+    margin: 0.4em 0 0;
   }
   h2 {
     font-size: 1.875em;
@@ -55,7 +58,8 @@
     line-height: 1.3333333333333333;
     margin: 1.3333333333333333em 0 0;
   }
-  ul, ol {
+  ul,
+  ol {
     margin: 1.5em 0 0;
   }
   p,
@@ -158,12 +162,12 @@
   .f60 {
     font-size: 3.75em;
     line-height: 1.2;
-    margin: 0.39999999999999997em 0 0;
+    margin: 0.4em 0 0;
   }
   .f66 {
     font-size: 4.125em;
     line-height: 1.0909090909090908;
-    margin: 0.3636363636363636em 0 0;
+    margin: 0.36363636363636365em 0 0;
   }
   /* From here on, I'm setting the top margin of each class to be double the default line-height, i.e. 48px instead of 24px because I think that for larger sized blocks of text, a gap of a single line-height's height isn't enough to separate the headings from the rest of the content. */
   .f72 {
@@ -184,7 +188,7 @@
   .f108 {
     font-size: 6.75em;
     line-height: 1.1111111111111112;
-    margin: 0.4444444444444445em 0 0;
+    margin: 0.4444444444444444em 0 0;
   }
   .f120 {
     font-size: 7.5em;
@@ -197,7 +201,8 @@
     border: 0 solid #999;
     padding: 0 15px;
   }
-  .box h3:first-child, .box p:first-child {
+  .box h3:first-child,
+  .box p:first-child {
     margin-top: 0;
   }
   .box + .box {

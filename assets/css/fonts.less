@@ -15,7 +15,8 @@
 .font(@fontsize:16,@lineheight:24,@multiplier:1,@lineheightreducer:1) {
 	font-size: (@fontsize/@defaultfontsize)*1em;
 	line-height: @lineheight/@fontsize/@lineheightreducer;
-	margin: (@lineheight/@fontsize*(@multiplier/(@lineheight/@defaultlineheight)))*1em 0 0;
+	//margin: (@lineheight/@fontsize*(@multiplier/(@lineheight/@defaultlineheight)))*1em 0 0; original, harder-to-read version
+	margin: ((@multiplier * @defaultlineheight) / @fontsize) * 1em 0 0;
 }
 
 // @bordertop and @borderbottom default to 1px and the values that you pass in are pixel values. 
