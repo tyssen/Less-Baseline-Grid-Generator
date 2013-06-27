@@ -13,3 +13,7 @@ Reduce the amount of work you need to do to calculate <code>font-size</code>, <c
 
 [John Faulds](http://www.tyssendesign.com.au/) / [@tyssen](http://twitter.com/tyssen/).
 [Peter Wilson](http://pwcc.cc/) / [@pwcc](http://twitter.com/pwcc/).
+
+## Licence
+
+[Attribution-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-sa/3.0/)
